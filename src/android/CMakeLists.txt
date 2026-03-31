@@ -5,8 +5,6 @@
 
 cmake_minimum_required(VERSION 3.4.1)
 
-target_link_options(${CMAKE_PROJECT_NAME} PRIVATE "-Wl,-z,max-page-size=16384")
-
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
@@ -22,6 +20,11 @@ add_library( # Sets the name of the library.
              native-lib.cpp
              cordova-bridge.cpp
            )
+
+# Ensure linker uses 16KiB max page size when supported.
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_C_COMPILER_ID MATCHES "Clang")
+    target_link_options(nodejs-mobile-cordova-native-lib PRIVATE "-Wl,-z,max-page-size=16384")
+endif()
 
 include_directories(libnode/include/node/)
 
@@ -62,5 +65,4 @@ target_link_libraries( # Specifies the target library.
 
                        # Links the target library to the log library
                        # included in the NDK.
-
                        ${log-lib} )
