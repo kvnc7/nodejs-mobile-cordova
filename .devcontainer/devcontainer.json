@@ -9,7 +9,7 @@
       "installGradle": true
     },
     "ghcr.io/NordcomInc/devcontainer-features/android-sdk:1": {
-      "extra_packages": "ndk-bundle ndk;24.0.8215888 cmake;3.22.1"
+      "extra_packages": "ndk-bundle ndk;28.2.13676358 cmake;3.22.1"
     }
   },
   "mounts": [
