@@ -14,7 +14,9 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags ""
-                arguments "-DANDROID_STL=c++_shared"
+                arguments "-DANDROID_TOOLCHAIN=clang",
+                          "-DANDROID_STL=c++_shared",
+                          "-DCMAKE_TOOLCHAIN_FILE=${System.env.ANDROID_NDK_HOME}/build/cmake/android.toolchain.cmake"
             }
         }
     }
