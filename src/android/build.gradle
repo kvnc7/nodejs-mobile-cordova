@@ -14,15 +14,17 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags ""
+                version "3.31.5"
                 arguments "-DANDROID_TOOLCHAIN=clang",
                           "-DANDROID_STL=c++_shared",
-                          "-DCMAKE_TOOLCHAIN_FILE=${System.env.ANDROID_NDK_HOME}/build/cmake/android.toolchain.cmake"
+                          "-DCMAKE_TOOLCHAIN_FILE=/home/lygos/AndroidSDK/ndk/28.2.13676358/build/cmake/android.toolchain.cmake"
             }
         }
     }
 
     externalNativeBuild {
         cmake {
+            version "3.31.5"
             path "libs/cdvnodejsmobile/CMakeLists.txt"
         }
     }
