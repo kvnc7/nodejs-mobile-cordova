@@ -1,6 +1,6 @@
 {
   "name": "@red-mobile/nodejs-mobile-cordova",
-  "version": "3.4.1",
+  "version": "3.4.2",
   "description": "Node.js for Mobile Apps Cordova plugin",
   "cordova": {
     "id": "@red-mobile/nodejs-mobile-cordova",
@@ -52,8 +52,8 @@
   },
   "devDependencies": {
     "cordova": "12.0.0",
-    "dprint": "0.48.0",
-    "npm-run-all2": "6.2.6",
+    "dprint": "0.50.1",
+    "npm-run-all2": "7.0.2",
     "rimraf": "6.0.1"
   }
 }

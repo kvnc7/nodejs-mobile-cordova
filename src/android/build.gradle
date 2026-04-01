@@ -9,12 +9,12 @@ ext.cdvMinSdkVersion = _nodeMinSdkVersion
 def _compileNativeModulesSdkVersion=_nodeMinSdkVersion;
 
 android {
-    ndkVersion "27.2.12479018"
+    ndkVersion "27.3.13750724"
     defaultConfig {
         externalNativeBuild {
             cmake {
                 cppFlags ""
-                arguments "-DANDROID_STL=c++_shared"
+                arguments "-DANDROID_STL=c++_shared", "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
             }
         }
     }
